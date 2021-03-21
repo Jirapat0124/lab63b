@@ -11,7 +11,7 @@
 4.  คอมพิวเตอร์
 
 ## ศึกษาข้อมูลเบื้องต้น
-* 01 run example1 [01 run example1](https://youtu.be/NLIUsWLEpmg"01 run example1")
+* 01 run example1 [](https://youtu.be/NLIUsWLEpmg"01 run example1")
 
 
 ## วิธีการทำการทดลอง
