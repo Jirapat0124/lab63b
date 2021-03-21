@@ -15,8 +15,9 @@
 
 ## วิธีการทำการทดลอง
 1. ต่อไมโครคอนโทรเลอร์ด้วยซีเรียล เชื่อมกับสายUSB
-2. เปิด command prompt
-3. ใช้โปรแกรมตัวอย่าง ในไฟล์PATTANI เพื่อทดสอบซึ่งเขียนด้วยภาษาC
+2. เปิด command prompt เข้าไดรฟ์ D จากคำสั่ง **D:**
+3. เข้าโปรแกรมตัวอย่างโดยพิมพ์คำสั่ง **cd pattani**
+4. เลือกโปรแกรมคำสั่ง **cd 01_Serial-Moniter** 
 ```c
 #include <Arduino.h>
 
@@ -34,9 +35,31 @@ void loop()
 	delay(1000);
 }
 ```
-4. 
+5. พิม vi src/maim.cpp เพื่อrunโปรแกรม
+6. พิม vi platformip.ini จะสามารถเช็คสเป็คของบอร์ดได้
+```; IOT for KIDS
+;
+; By Dr.Choompol Boonmee
+; 
+
+[env:exercise01]
+platform = nordicnrf51
+board = NRF51822
+framework = Mbed	
+board_build.flash_mode = dout
+
+upload_port = /dev/cu.usbserial-1420
+;upload_port = COM3
+
+monitor_port = /dev/cu.usbserial-1420
+;monitor_port = COM3
+monitor_speed = 115200
+```
+7. อัพโหลดโปรแกรมลงในไมโครคอนโทรนเลอร์ด้วยคำสั่ง **pio run -t upload** พร้อมทั้งกดปุ่มสีดำค้างเพื่อให้ดาวโหลด และกดปุ่ทสีแดง1ครั้งเพื่อรีเซ็ทคำสั่งเก่า
+8. จากนั้นใช้คำสั่ง**pio device monitor** เพื่อดูผลลัพ์บนคอมพิวเตอร์
 
 
 ## การบันทึกผลการทดลอง
+
 ## อภิปรายผลการทดลอง
 ## คำถามหลังการทดลอง
