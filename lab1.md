@@ -11,7 +11,7 @@
 4.  คอมพิวเตอร์
 
 ## ศึกษาข้อมูลเบื้องต้น
-[Microcontroler](https://youtu.be/NLIUsWLEpmg"Microcontroller")
+[Microcontroler](https://youtu.be/NLIUsWLEpmg)
 
 ## วิธีการทำการทดลอง
 1. ต่อไมโครคอนโทรเลอร์ด้วยซีเรียล เชื่อมกับสายUSB
