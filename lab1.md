@@ -60,7 +60,7 @@ monitor_speed = 115200
 
 
 ## การบันทึกผลการทดลอง
-![image](https://imgur.com/qVYlVLv)
+![image](https://i.imgur.com/qVYlVLv.jpg)
 
 ## อภิปรายผลการทดลอง
 ## คำถามหลังการทดลอง
