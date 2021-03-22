@@ -58,10 +58,16 @@ void loop()
 9. นำสายไฟเส้นสีขาวไปจิ้มตรงสายสีดำ(0V) หลอดไฟLED  จะส่องสว่าง
 <img width="1112" alt="image" src="https://user-images.githubusercontent.com/80879598/111984412-eb302900-8b3d-11eb-831b-6806adff7463.png">
 
-10. 
+10. ปุ่มสีดำบน ไมโครคอนโทรเลอร์ก็เชื่อมกับพอร์ท0 ทำให้กดปุ่มจะมีไฟLEDส่องสว่าง
+<img width="1112" alt="image" src="https://user-images.githubusercontent.com/80879598/111984851-7e695e80-8b3e-11eb-8e7d-6357785d508c.png">
+
+11. ต่อcensorรับแสงกับสายสีแดง5V ต่อกับตัวต้านทาน ไปเข้าทางพอร์ท0
+<img width="1112" alt="image" src="https://user-images.githubusercontent.com/80879598/111985559-53cbd580-8b3f-11eb-8db4-6a8874316012.png">
+
 
 
 ## การบันทึกผลการทดลอง
+* 
 
 ## อภิปรายผลการทดลอง
 
