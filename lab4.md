@@ -22,7 +22,9 @@
 3. เปิด Comand Prompt เข้าโฟลเดอร์D
 4. เปิดโปรแกรมตัวอย่างโดยพิมพ์คำสั่ง **cd pattani**
 5. เลือกตัวอย่างโปรแกรมคำสั่ง **cd 04_Input-Port**
-6. พิมพ์ vi src/maim.cpp เพื่อดูเนื้อหาโปรแกรม จะได้ดังนี้ (พอร์ท 0 เป็นinput พอร์ท 2 เป็นoutput)
+6. พิมพ์ vi src/maim.cpp เพื่อดูเนื้อหาโปรแกรม จะได้ดังนี้ (สายสีขาวพอร์ท 0 เป็นinput และสายสีเหลืองพอร์ท 2 เป็นoutput)
+เมื่อinputเป็น0 ไฟจะติด และถ้าinputเป็น1 ไฟจะดับ
+
 ```c
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
@@ -49,8 +51,14 @@ void loop()
 	delay(100);
 }
 ```
-7. อัปโหลดโปรแกรมลงในไมโครคอนโทรเลอร์โดยใช้คำสั่ง pio run -t upload พร้อมทั้งกดปุ่มสีดำค้างไว้เพื่ออัพโหลด จะขึ้นหน้าจอแบบนี้ 
+7. อัปโหลดโปรแกรมลงในไมโครคอนโทรเลอร์โดยใช้คำสั่ง **pio run -t upload** พร้อมทั้งกดปุ่มสีดำค้างไว้เพื่ออัพโหลด จะขึ้นหน้าจอแบบนี้ 
 <img width="776" alt="image" src="https://user-images.githubusercontent.com/80879598/111982887-1580e700-8b3c-11eb-8a8a-170b929ae8c4.png">
+8. กดปุ่ม **pio device moniter** จะได้รูปภาพดังนี้
+<img width="1101" alt="image" src="https://user-images.githubusercontent.com/80879598/111983387-aa83e000-8b3c-11eb-8a54-dc7d6370f653.png">
+9. นำสายไฟเส้นสีขาวไปจิ้มตรงสายสีดำ(0V) หลอดไฟLED  จะส่องสว่าง
+<img width="1112" alt="image" src="https://user-images.githubusercontent.com/80879598/111984412-eb302900-8b3d-11eb-831b-6806adff7463.png">
+
+10. 
 
 
 ## การบันทึกผลการทดลอง
