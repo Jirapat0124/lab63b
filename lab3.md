@@ -51,7 +51,7 @@ void loop()
 ```
 
 6. อัปโหลดโปรแกรมลงในไมโครคอนโทรเลอร์โดยใช้คำสั่ง **pio run -t upload** พร้อมทั้งกดปุ่มสีดำค้างไว้เพื่ออัพโหลด และกดปุ่มสีแดงเพื่อรีเซ็ท
-[Image](https://i.imgur.com/W1OsA1a.jpg)
+![Image](https://i.imgur.com/W1OsA1a.jpg)
 7. พิมพ์คำสั่ง pio device monitor เพื่อดูผลการรันโปรแกรม
 
 
