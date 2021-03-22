@@ -19,7 +19,39 @@
 ## วิธีการทำการทดลอง
 1. ต่อ adapter เข้ากับ USB to serial แล้วต่อบนตัวไมโครคอนโทรเลอร์
 2. เปิด command prompt
-3. 
+3. เข้าโปรแกรมตัวอย่างโดยพิมพ์คำสั่ง cd pattani
+4. เลือกโปรแกรมคำสั่ง cd 03_Output-Port
+5. พิมพ์ vi src/maim.cpp เพื่อดูเนื้อหาโปรแกรม จะได้ดังนี้
+```c
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
+
+int cnt = 0;
+
+void setup()
+{
+	Serial.begin(115200);
+	pinMode(0, OUTPUT);
+	Serial.println("\n\n\n");
+}
+
+void loop()
+{
+	cnt++;
+	if(cnt % 2) {
+		Serial.println("========== ON ===========");
+		digitalWrite(0, HIGH);
+	} else {
+		Serial.println("========== OFF ===========");
+		digitalWrite(0, LOW);
+	}
+	delay(500);
+}
+
+```
+
+
+
 
 ## การบันทึกผลการทดลอง
 
