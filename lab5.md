@@ -6,7 +6,7 @@
 ## อุปกรณ์ที่ใช้
 
 ## ศึกษาข้อมูลเบื้องต้น
-[05 run wifi](https://youtu.be/VX-QNQcO-b4"05 run wifi")
+[05 run wifi](https://youtu.be/VX-QNQcO-b4 "05 run wifi")
 
 ## วิธีการทำการทดลอง
 
