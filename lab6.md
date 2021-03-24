@@ -59,12 +59,22 @@ void loop(void){
 	server.handleClient();
   ```
   5. ต่อUSBกับซีเรียล และต่อซีเรียลกับไมโครคอนโทรเลอร์ แล้วใช้คำสั่ง pio run -t upload เพื่ออัพโหลดโปรแกรมลงไมโครคอนโทรเลอร์โดยกดปุ่มสีดำค้างเพื่ออัพโหลด และกดปุ่มสีแดงเพื่อรีเซ็ท
+  <img width="1112" alt="image" src="https://user-images.githubusercontent.com/80879598/112306722-b0132e80-8cd2-11eb-9d09-8f8cdfb768dd.png">
+
   6. พิมพ์คำสั่ง pio device monitor เพื่อดูผลลัพธ์
+  <img width="1112" alt="image" src="https://user-images.githubusercontent.com/80879598/112306921-f072ac80-8cd2-11eb-8c29-874e6eb051a7.png">
+
 
 
 ## การบันทึกผลการทดลอง
+* สามารถใช้ไมโครคอนโทรเลอร์สร้างเครือข่ายไวไฟขึ้นมาได้ ซึ่งกำหนดได้ทั้งชื่อและพาสเวิส
+<img width="1112" alt="image" src="https://user-images.githubusercontent.com/80879598/112306999-01bbb900-8cd3-11eb-8e61-ad629bc0b9c0.png">
+
 
 ## อภิปรายผลการทดลอง
-
+จากการรันโปแกรมลงไมโครคอนโทรเลอร์สามารถทำได้จริงซึ่งสามารถใช้งานwifiได้
 
 ## คำถามหลังการทดลอง
+ประโยชน์ของwifi APคือ
+* เราสามารถนำอุปกรณ์รับสัญญาณ wireless ไปใช้ตรงที่มี wifi APได้
+
