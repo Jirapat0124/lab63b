@@ -33,7 +33,7 @@ void setup()
 {
 	Serial.begin(115200);
 	pinMode(0, INPUT);
-  	pinMode(1, INPUT);     #เพิ่มinput 1 และoutput 3
+  	pinMode(1, INPUT);     //เพิ่มinput 1 และoutput 3
 	pinMode(2, OUTPUT);
   	pinMode(3, OUTPUT);
 	Serial.println("\n\n\n");
