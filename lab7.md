@@ -15,8 +15,7 @@
 
 
 ## ศึกษาข้อมูลเบื้องต้น
-[04 run example 4](https://youtu.be/nFqoZT26U5k)
-
+[04 run example 4](https://www.youtube.com/watch?v=nFqoZT26U5k&t=88s)
 
 
 ## วิธีการทำการทดลอง
@@ -33,32 +32,22 @@ void setup()
 {
 	Serial.begin(115200);
 	pinMode(0, INPUT);
-  	pinMode(1, INPUT);     //เพิ่มinput 1 และoutput 3
 	pinMode(2, OUTPUT);
-  	pinMode(3, OUTPUT);
 	Serial.println("\n\n\n");
 }
 
 void loop()
 {
 	int val = digitalRead(0);
-  	int a = digitalRead(1);
-  Serial.printf("======= read %d\n", val);
-	if(val==1) and (a==1) {
+	Serial.printf("======= read %d\n", val);
+	if(val==1) {
 		digitalWrite(2, LOW);
-    		digitalWrite(3, HIGH);
 	} else {
 		digitalWrite(2, HIGH);
-    		digitalWrite(3, LOW);
 	}
-  
-  	for cnt in range(1,2+1);
-  	Serial.printf("PATTANI :%d\n",cnt);
-  	int b = cnt ;
-  	int d = b * 1000;
-	delay(d);
+	delay(100);
 }
-
+```
 
 
 ## การบันทึกผลการทดลอง
