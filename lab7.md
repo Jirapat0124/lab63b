@@ -32,6 +32,7 @@ void setup()
 {
 	Serial.begin(115200);
 	pinMode(0, INPUT);
+	pinMode(1, INPUT);
 	pinMode(2, OUTPUT);
 	Serial.println("\n\n\n");
 }
@@ -39,14 +40,19 @@ void setup()
 void loop()
 {
 	int val = digitalRead(0);
-	Serial.printf("======= read %d\n", val);
-	if(val==1) {
-		digitalWrite(2, LOW);
-	} else {
-		digitalWrite(2, HIGH);
-	}
-	delay(100);
+	int x = digitalRead(1)
+	if(x==1) {
+		Serial.printf("======The program is ready ======")
+		Serial.printf("======= read %d\n", val);
+		if(val==1) {
+			digitalWrite(2, LOW);
+		} else {
+			digitalWrite(2, HIGH);
+		}
+		}
+	delay(1000);
 }
+	
 ```
 
 
