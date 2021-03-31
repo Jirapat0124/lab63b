@@ -11,18 +11,19 @@
 3. USB to Serial
 4. คอมพิวเตอร์
 5. หลอดไฟ LED
-6. censor รับแสง
+6. censor วัดเสียง
 7. สวิทซ์ ON-OFF
 
 
 ## ศึกษาข้อมูลเบื้องต้น
 [04 run example 4](https://www.youtube.com/watch?v=nFqoZT26U5k&t=88s)
+[โมดูลไมโครโฟน วัดเสียง](https://www.modulemore.com/product/53/%E0%B9%82%E0%B8%A1%E0%B8%94%E0%B8%B9%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B9%82%E0%B8%9F%E0%B8%99-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B8%A2%E0%B8%87-microphone-sound-detection-sensor-module)
 
 
 ## วิธีการทำการทดลอง
 1. เชื่อมต่อ Adapter และ USB to serial เข้าด้วยกัน
 2. ต่อไมโครคอนโทรลเลอร์หเข้ากับซีเรียลพอร์ทเปิด 
-3. ต่อcensorรับแสงเข้าที่port0 และเชื่อมกับสายสีแดง5V
+3. ต่อcensorรับเสียงเข้าที่port0 และเชื่อมกับสายสีแดง5V
 4. ต่อสวิทซ์ON-OFFเข้ากับ port1
 5. command prompt รันโปรแกรมตัวอย่าง
 ```c
@@ -37,17 +38,18 @@ void setup()
 	pinMode(0, INPUT);
 	pinMode(1, INPUT);     //เชื่อมกับสวิทซ์
 	pinMode(2, OUTPUT);
+	threshold=200
 	Serial.println("\n\n\n");
 }
 
 void loop()
 {
-	int val = digitalRead(0);
+	int val = AnalogRead(0);
 	int x = digitalRead(1)
 	if(x==0) {
 		Serial.printf("======The program is ready ======")
 		Serial.printf("======= read %d\n", val);
-		if(val==1) {
+		if(val<=threshold) {
 			digitalWrite(2, LOW);
 		} else {
 			digitalWrite(2, HIGH);
@@ -55,7 +57,7 @@ void loop()
 	} else {
 		Serial.printf("======The program is not ready ======")
 	}
-	delay(1000);
+	delay(10000);
 }
 	
 ```
@@ -65,8 +67,11 @@ void loop()
 
 
 ## การบันทึกผลการทดลอง
-เมื่อ
+เมื่อรันโปรแกรมดังที่แสดงบนหน้าจอ จะขึ้นว่า The program is not ready ถ้าสวิทซ์เป็น OFF กดเปิดสวิทซ์ON เพื่อเรียกใช้งานฟังก์ชันส์ เมื่อเปิดแล้วจะขึ้นหน้าจอว่า The program is ready เมื่อมีเสียงที่ผ่านเกณฑ์ หลอดไฟLED จะติดซึ่งตั้งค่าdelayไว้ 10วินาที เมื่อcensorรับเสียง ไม่ได้รับข้อมูลเข้ามาแล้ว ผ่านไป10วินาที ไฟก็จะดับ
 
 ## อภิปรายผลการทดลอง
+สามารถนำมาประยุก์ใช้กับชีวิตประจำวันได้ ถ้านำเอาองค์ความรู้นี้ไปต่อยอด สามารถสร้างรั้วบ้านที่เวลาได้ยินเสียงเล็ดลอดผ่านเข้ามาแล้ว ไฟก็จะติดเพื่อดูว่ามีตัวอะไรเข้าบ้านมารึป่าว ซึ่งสามารถประยุกต์กับcensor วัดอุณหภูมิได้อีกด้วย
 
 ## คำถามหลังการทดลอง
+เราสามารถเปลี่ยนcensorรับเสียงเป็นcensorรับแสงโดยไม่เปลี่ยนชุดคำสั่งได้หรือไม่
+* ไม่ได้เพราะการรับสัญญานของcensorรับแสงเป็นdigital แต่censorรับเสียงเป็นanalog
